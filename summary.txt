@@ -1,0 +1,9 @@
+NIFTY50@15min
+    Short Trade:
+        Total Points Gained (Short): 61777.65
+        Win Ratio: 0.84
+        Maximum Drawdown: -1188.80
+    Long Trade:
+        Total Points Gained (Long): 37393.05
+        Win Ratio: 0.79
+        Maximum Drawdown: -2041.25
