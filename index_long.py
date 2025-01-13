@@ -55,10 +55,8 @@ def apply_strategy(df, sl_points=100):
         if not sl_hit:
             last_close = group.iloc[-1]['close']
             last_time = group.index[-1]
-            # Check if it's a long or short position based on entry vs. close price
-            if last_close > entry_price:
-                position = 'Long'
-                points_gained = last_close - entry_price
+            position = 'Long'
+            points_gained = last_close - entry_price
                 
             results.append({
                 'Date': date,
@@ -98,13 +96,13 @@ def main():
     max_drawdown = drawdown.min()  # Maximum drawdown
 
     # Print results
-    print("Total Points Gained (Long):", total_long_points)
-    print("Total Points Gained (Short):", total_short_points)
-    print("Win Ratio:", win_ratio)
-    print("Maximum Drawdown:", max_drawdown)
+    print("Total Points Gained (Long):", round(total_long_points, 2))
+    print("Total Points Gained (Short):", round(total_short_points, 2))
+    print("Win Ratio:", round(win_ratio, 2))
+    print("Maximum Drawdown:", round(max_drawdown, 2))
 
     # Optionally save the results to a CSV file
-    strategy_results.to_csv('strategy_results.csv', index=False)
+    strategy_results.to_csv('strategy_results_long.csv', index=False)
     # print(strategy_results)
 
 
